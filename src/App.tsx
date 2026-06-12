@@ -1,4 +1,5 @@
 import Mapbox from './components/mapbox'
+import Header from './components/header'
 
 import './App.css'
 

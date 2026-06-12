@@ -23,7 +23,7 @@ const Mapbox = () => {
     mapRef.current = new mapboxgl.Map({
       accessToken: import.meta.env.VITE_MAPBOX_TOKEN,
       container: mapContainerRef.current,
-      // style: 'mapbox://styles/mapbox/streets-v11',
+    //   style: 'mapbox://styles/taylorspencer22/cmqaffwub002n01qt9egtb92k',
       center: [-99.55446, 36.84276],
       zoom: 3.22
     });
