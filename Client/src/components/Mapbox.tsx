@@ -35,7 +35,7 @@ const Mapbox = () => {
 
       //update state
       setCenter(newCenter ? [newCenter.lng, newCenter.lat] : INITIAL_CENTER)
-      setZoom(newZoom)
+      setZoom(newZoom ?? INITIAL_ZOOM)
     })
 
     return () => {
