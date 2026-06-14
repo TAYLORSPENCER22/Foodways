@@ -16,6 +16,23 @@ datasource db {
 
 // Country Model 
 model Country {
-  id   String @id @default(uuid())
-  name String
+  id        String     @id @default(uuid())
+  name      String
+  slug      String     @unique
+  foodCards FoodCard[]
+}
+
+// Food Card 
+model FoodCard {
+  id          String   @id @default(uuid()) //dish id
+  name        String // dish name
+  slug        String   @unique // dish-slug
+  description String // dish description 
+  imageUrl    String? // dish image url
+  regionLabel String? // dish region label (e.g. "Southeast Asia", "Mediterranean", etc.)
+  ingredients String[] // dish ingredients (e.g. ["rice", "curry powder", etc.])
+  createdAt   DateTime @default(now()) // timestamp for when the dish was added to the database
+
+  countryId String
+  country   Country @relation(fields: [countryId], references: [id]) // relation to the Country model
 }
