@@ -11,11 +11,11 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  // url      = env("DATABASE_URL")
 }
 
 //Country Model 
-model Country {
-  id   String @id @default(uuid())
-  name String
-}
+// model Country {
+//   id   String @id @default(uuid())
+//   name String
+// }
