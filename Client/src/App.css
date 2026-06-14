@@ -33,7 +33,7 @@
 
 .reset-button {
   position: absolute;
-  background-color: yellow;
+  background-color: red;
   top: 50px;
   z-index: 1;
   left: 12px;

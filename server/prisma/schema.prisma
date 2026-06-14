@@ -14,8 +14,8 @@ datasource db {
   // url      = env("DATABASE_URL")
 }
 
-//Country Model 
-// model Country {
-//   id   String @id @default(uuid())
-//   name String
-// }
+// Country Model 
+model Country {
+  id   String @id @default(uuid())
+  name String
+}
