@@ -20,35 +20,20 @@ const app = express();
 app.use(express.json());
 
 // API Routes
-app.use("/countries", countriesRoutes); // Mount the countries routes at /countries
+app.use("/countries", countriesRoutes(prisma)); // Mount the countries routes at /countries
 
 
 
 
-//create country
-// app.post("/countries", async (req, res) => {
-//     const { name, slug: providedSlug } = req.body;
 
-//     // generate a slug if one wasn't provided
-//     const slug =
-//         providedSlug ??
-//         String(name)
-//             .toLowerCase()
-//             .trim()
-//             .replace(/\s+/g, "-")
-//             .replace(/[^\w-]/g, "");
-
-//     const country = await prisma.country.create({
-//         data: {
-//             name,
-//             slug,
-//         },
-//     });
-//     res.json(country);
-// })
+//Error handling (keep at the end of routes)
+app.use((err: any, req: express.Request, res: express.Response) => {
+    console.error(err.stack);
+    res.status(500).json({ error: "Something went wrong!" });
+});
 
 
-
+// Start the server
 const port = 5001;
 const server = app.listen(port, () => {
     console.log(`Server is running on ${port}`)
