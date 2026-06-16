@@ -10,6 +10,19 @@ router.get("/", async (req, res) => {
     res.json(countries);
 });
 
+//get one country by slug
+router.get("/:slug", async (req, res) => {
+    console.log("get country by slug success");
+    const { slug } = req.params;
+    const country = await prisma.country.findUnique({ where: { slug }, include: { foodCards: true } });
+    // test console.log("slug:", slug);
+    if (!country) {
+        return res.status(404).json({ error: "Country not found" });
+    } 
+    res.json(country);
+    
+});
+
 
 //create a country test (will remove later)
 router.post("/", async (req, res) => {

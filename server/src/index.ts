@@ -27,7 +27,7 @@ app.use("/food-cards", foodCardsRoutes(prisma)); // Mount the food cards routes 
 
 
 
-//Error handling (keep at the end of routes)
+//Error handling
 app.use((err: any, req: express.Request, res: express.Response) => {
     console.error(err.stack);
     res.status(500).json({ error: "Something went wrong!" });
