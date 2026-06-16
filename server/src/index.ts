@@ -6,6 +6,7 @@ import { get } from "node:http";
 
 //Import routes
 import countriesRoutes from "./routes/countries.js"
+import foodCardsRoutes from "./routes/foodCards.js"
 
 // Initialize Prisma Client with the PostgreSQL adapter
 const adapter = new PrismaPg({
@@ -21,7 +22,7 @@ app.use(express.json());
 
 // API Routes
 app.use("/countries", countriesRoutes(prisma)); // Mount the countries routes at /countries
-
+app.use("/food-cards", foodCardsRoutes(prisma)); // Mount the food cards routes at /food-cards
 
 
 

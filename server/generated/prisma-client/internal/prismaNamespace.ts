@@ -595,7 +595,9 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 export const CountryScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  slug: 'slug'
+  slug: 'slug',
+  imageUrl: 'imageUrl',
+  description: 'description'
 } as const
 
 export type CountryScalarFieldEnum = (typeof CountryScalarFieldEnum)[keyof typeof CountryScalarFieldEnum]
@@ -606,6 +608,7 @@ export const FoodCardScalarFieldEnum = {
   name: 'name',
   slug: 'slug',
   description: 'description',
+  story: 'story',
   imageUrl: 'imageUrl',
   regionLabel: 'regionLabel',
   ingredients: 'ingredients',

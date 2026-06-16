@@ -16,9 +16,12 @@ datasource db {
 
 // Country Model 
 model Country {
-  id        String     @id @default(uuid())
-  name      String
-  slug      String     @unique
+  id          String  @id @default(uuid())
+  name        String
+  slug        String  @unique
+  imageUrl    String? // country circle logo
+  description String? // short sidebar text
+
   foodCards FoodCard[]
 }
 
@@ -27,7 +30,8 @@ model FoodCard {
   id          String   @id @default(uuid()) //dish id
   name        String // dish name
   slug        String   @unique // dish-slug
-  description String // dish description 
+  description String // short sidebar text
+  story       String // long popup text 
   imageUrl    String? // dish image url
   regionLabel String? // dish region label (e.g. "Southeast Asia", "Mediterranean", etc.)
   ingredients String[] // dish ingredients (e.g. ["rice", "curry powder", etc.])

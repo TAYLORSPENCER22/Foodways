@@ -29,6 +29,7 @@ export type FoodCardMinAggregateOutputType = {
   name: string | null
   slug: string | null
   description: string | null
+  story: string | null
   imageUrl: string | null
   regionLabel: string | null
   createdAt: Date | null
@@ -40,6 +41,7 @@ export type FoodCardMaxAggregateOutputType = {
   name: string | null
   slug: string | null
   description: string | null
+  story: string | null
   imageUrl: string | null
   regionLabel: string | null
   createdAt: Date | null
@@ -51,6 +53,7 @@ export type FoodCardCountAggregateOutputType = {
   name: number
   slug: number
   description: number
+  story: number
   imageUrl: number
   regionLabel: number
   ingredients: number
@@ -65,6 +68,7 @@ export type FoodCardMinAggregateInputType = {
   name?: true
   slug?: true
   description?: true
+  story?: true
   imageUrl?: true
   regionLabel?: true
   createdAt?: true
@@ -76,6 +80,7 @@ export type FoodCardMaxAggregateInputType = {
   name?: true
   slug?: true
   description?: true
+  story?: true
   imageUrl?: true
   regionLabel?: true
   createdAt?: true
@@ -87,6 +92,7 @@ export type FoodCardCountAggregateInputType = {
   name?: true
   slug?: true
   description?: true
+  story?: true
   imageUrl?: true
   regionLabel?: true
   ingredients?: true
@@ -172,6 +178,7 @@ export type FoodCardGroupByOutputType = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl: string | null
   regionLabel: string | null
   ingredients: string[]
@@ -205,6 +212,7 @@ export type FoodCardWhereInput = {
   name?: Prisma.StringFilter<"FoodCard"> | string
   slug?: Prisma.StringFilter<"FoodCard"> | string
   description?: Prisma.StringFilter<"FoodCard"> | string
+  story?: Prisma.StringFilter<"FoodCard"> | string
   imageUrl?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   regionLabel?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   ingredients?: Prisma.StringNullableListFilter<"FoodCard">
@@ -218,6 +226,7 @@ export type FoodCardOrderByWithRelationInput = {
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   description?: Prisma.SortOrder
+  story?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   regionLabel?: Prisma.SortOrderInput | Prisma.SortOrder
   ingredients?: Prisma.SortOrder
@@ -234,6 +243,7 @@ export type FoodCardWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.FoodCardWhereInput | Prisma.FoodCardWhereInput[]
   name?: Prisma.StringFilter<"FoodCard"> | string
   description?: Prisma.StringFilter<"FoodCard"> | string
+  story?: Prisma.StringFilter<"FoodCard"> | string
   imageUrl?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   regionLabel?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   ingredients?: Prisma.StringNullableListFilter<"FoodCard">
@@ -247,6 +257,7 @@ export type FoodCardOrderByWithAggregationInput = {
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   description?: Prisma.SortOrder
+  story?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   regionLabel?: Prisma.SortOrderInput | Prisma.SortOrder
   ingredients?: Prisma.SortOrder
@@ -265,6 +276,7 @@ export type FoodCardScalarWhereWithAggregatesInput = {
   name?: Prisma.StringWithAggregatesFilter<"FoodCard"> | string
   slug?: Prisma.StringWithAggregatesFilter<"FoodCard"> | string
   description?: Prisma.StringWithAggregatesFilter<"FoodCard"> | string
+  story?: Prisma.StringWithAggregatesFilter<"FoodCard"> | string
   imageUrl?: Prisma.StringNullableWithAggregatesFilter<"FoodCard"> | string | null
   regionLabel?: Prisma.StringNullableWithAggregatesFilter<"FoodCard"> | string | null
   ingredients?: Prisma.StringNullableListFilter<"FoodCard">
@@ -277,6 +289,7 @@ export type FoodCardCreateInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -289,6 +302,7 @@ export type FoodCardUncheckedCreateInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -301,6 +315,7 @@ export type FoodCardUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -313,6 +328,7 @@ export type FoodCardUncheckedUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -325,6 +341,7 @@ export type FoodCardCreateManyInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -337,6 +354,7 @@ export type FoodCardUpdateManyMutationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -348,6 +366,7 @@ export type FoodCardUncheckedUpdateManyInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -378,6 +397,7 @@ export type FoodCardCountOrderByAggregateInput = {
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   description?: Prisma.SortOrder
+  story?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   regionLabel?: Prisma.SortOrder
   ingredients?: Prisma.SortOrder
@@ -390,6 +410,7 @@ export type FoodCardMaxOrderByAggregateInput = {
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   description?: Prisma.SortOrder
+  story?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   regionLabel?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -401,6 +422,7 @@ export type FoodCardMinOrderByAggregateInput = {
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
   description?: Prisma.SortOrder
+  story?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   regionLabel?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -453,10 +475,6 @@ export type FoodCardCreateingredientsInput = {
   set: string[]
 }
 
-export type NullableStringFieldUpdateOperationsInput = {
-  set?: string | null
-}
-
 export type FoodCardUpdateingredientsInput = {
   set?: string[]
   push?: string | string[]
@@ -471,6 +489,7 @@ export type FoodCardCreateWithoutCountryInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -482,6 +501,7 @@ export type FoodCardUncheckedCreateWithoutCountryInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -522,6 +542,7 @@ export type FoodCardScalarWhereInput = {
   name?: Prisma.StringFilter<"FoodCard"> | string
   slug?: Prisma.StringFilter<"FoodCard"> | string
   description?: Prisma.StringFilter<"FoodCard"> | string
+  story?: Prisma.StringFilter<"FoodCard"> | string
   imageUrl?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   regionLabel?: Prisma.StringNullableFilter<"FoodCard"> | string | null
   ingredients?: Prisma.StringNullableListFilter<"FoodCard">
@@ -534,6 +555,7 @@ export type FoodCardCreateManyCountryInput = {
   name: string
   slug: string
   description: string
+  story: string
   imageUrl?: string | null
   regionLabel?: string | null
   ingredients?: Prisma.FoodCardCreateingredientsInput | string[]
@@ -545,6 +567,7 @@ export type FoodCardUpdateWithoutCountryInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -556,6 +579,7 @@ export type FoodCardUncheckedUpdateWithoutCountryInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -567,6 +591,7 @@ export type FoodCardUncheckedUpdateManyWithoutCountryInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
+  story?: Prisma.StringFieldUpdateOperationsInput | string
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   regionLabel?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   ingredients?: Prisma.FoodCardUpdateingredientsInput | string[]
@@ -580,6 +605,7 @@ export type FoodCardSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   name?: boolean
   slug?: boolean
   description?: boolean
+  story?: boolean
   imageUrl?: boolean
   regionLabel?: boolean
   ingredients?: boolean
@@ -593,6 +619,7 @@ export type FoodCardSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   name?: boolean
   slug?: boolean
   description?: boolean
+  story?: boolean
   imageUrl?: boolean
   regionLabel?: boolean
   ingredients?: boolean
@@ -606,6 +633,7 @@ export type FoodCardSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   name?: boolean
   slug?: boolean
   description?: boolean
+  story?: boolean
   imageUrl?: boolean
   regionLabel?: boolean
   ingredients?: boolean
@@ -619,6 +647,7 @@ export type FoodCardSelectScalar = {
   name?: boolean
   slug?: boolean
   description?: boolean
+  story?: boolean
   imageUrl?: boolean
   regionLabel?: boolean
   ingredients?: boolean
@@ -626,7 +655,7 @@ export type FoodCardSelectScalar = {
   countryId?: boolean
 }
 
-export type FoodCardOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "description" | "imageUrl" | "regionLabel" | "ingredients" | "createdAt" | "countryId", ExtArgs["result"]["foodCard"]>
+export type FoodCardOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "description" | "story" | "imageUrl" | "regionLabel" | "ingredients" | "createdAt" | "countryId", ExtArgs["result"]["foodCard"]>
 export type FoodCardInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   country?: boolean | Prisma.CountryDefaultArgs<ExtArgs>
 }
@@ -647,6 +676,7 @@ export type $FoodCardPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     name: string
     slug: string
     description: string
+    story: string
     imageUrl: string | null
     regionLabel: string | null
     ingredients: string[]
@@ -1080,6 +1110,7 @@ export interface FoodCardFieldRefs {
   readonly name: Prisma.FieldRef<"FoodCard", 'String'>
   readonly slug: Prisma.FieldRef<"FoodCard", 'String'>
   readonly description: Prisma.FieldRef<"FoodCard", 'String'>
+  readonly story: Prisma.FieldRef<"FoodCard", 'String'>
   readonly imageUrl: Prisma.FieldRef<"FoodCard", 'String'>
   readonly regionLabel: Prisma.FieldRef<"FoodCard", 'String'>
   readonly ingredients: Prisma.FieldRef<"FoodCard", 'String[]'>
