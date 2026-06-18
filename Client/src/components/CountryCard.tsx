@@ -13,7 +13,7 @@ function CountryCardList() {
 
   useEffect(() => {
     fetchCountryCards().then((data) => {
-      console.log(data);  // ← check the browser console
+      console.log(data);  // check for data 
       setcountryCards(data);
     });
   }, []);
@@ -21,7 +21,7 @@ function CountryCardList() {
   return (
     <div>
       {countryCards.map(card => (
-        <p key={card.id}>{card.name}</p>  // ← just display names for now
+        <p key={card.id}>{card.name}</p>  // display names (temp)
       ))}
     </div>
   );
