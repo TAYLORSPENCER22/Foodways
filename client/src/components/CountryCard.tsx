@@ -19,11 +19,16 @@ function CountryCardList() {
   }, []);
 
   return (
-    <div>
+    <>
+    <div className="card-wrapper">
       {countryCards.map(card => (
-        <p key={card.id}>{card.name}</p>  // display names (temp)
+        <div className="individual-card-container">
+        <p key={card.id}>{card.name}</p> 
+        <p key={card.id}>{card.description}</p>
+        </div>
       ))}
     </div>
+    </>
   );
 }
 

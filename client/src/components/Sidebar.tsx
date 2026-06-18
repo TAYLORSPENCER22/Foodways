@@ -10,7 +10,9 @@ return (
         <button>All Countries</button>
         <button>Most Viewed</button>
         <button>My Favorites</button>
+        <div className="card-wrapper">
         < CountryCardList />
+        </div>
     </div>
     </>
 )

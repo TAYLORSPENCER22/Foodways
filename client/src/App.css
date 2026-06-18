@@ -57,3 +57,21 @@
 .Header {
   height: 100px;
 }
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+  align-items: center;
+  height: 488px;
+  gap: 7px;
+  background: blue;
+  overflow-y: auto; 
+}
+
+.individual-card-container {
+  background: red;
+  height: 135px;
+  width: 285px;
+}
