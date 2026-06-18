@@ -13,7 +13,7 @@ function FoodCardList() {
 
   useEffect(() => {
     fetchFoodCards().then((data) => {
-      console.log(data);  // ← check the browser console
+      console.log(data);  // check for data
       setFoodCards(data);
     });
   }, []);
@@ -21,7 +21,7 @@ function FoodCardList() {
   return (
     <div>
       {foodCards.map(card => (
-        <p key={card.id}>{card.name}</p>  // ← just display names for now
+        <p key={card.id}>{card.name}</p>  // display names (temp)
       ))}
     </div>
   );

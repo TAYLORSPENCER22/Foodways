@@ -3,18 +3,15 @@ import Header from './components/header'
 
 import './App.css'
 import Sidebar from '/Users/taylor/Desktop/Foodways/client/src/components/Sidebar.tsx'
-import CountryCardList from '/Users/taylor/Desktop/Foodways/client/src/components/CountryCard'
 
 
 function App() {
   return (
-    <>
-    < Header />
-    < Sidebar />
-    <CountryCardList />
-    < Mapbox /> 
-
-    </>
+    <div className="app">
+      <Header />
+        <Sidebar />
+        <Mapbox />
+    </div>
   )
 }
 

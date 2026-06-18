@@ -55,13 +55,15 @@ const Mapbox = () => {
   
   return (
     <>
-      <div className="sidebar">
+    <div className='map-container-wrapper'>
+      <div className="map-coordinates">
       Longitude: {center[0].toFixed(4)} | Latitude: {center[1].toFixed(4)} | Zoom: {zoom.toFixed(2)}
     </div>
     <button className='reset-button' onClick={handleButtonClick}>
       Reset
       </button>
       <div id='map-container' ref={mapContainerRef} />
+      </div>
     </>
   )
 }

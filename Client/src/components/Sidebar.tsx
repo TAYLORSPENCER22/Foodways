@@ -1,3 +1,5 @@
+import CountryCardList from '/Users/taylor/Desktop/Foodways/client/src/components/CountryCard'
+
 const Sidebar = () => {
 return (
     <>
@@ -8,12 +10,7 @@ return (
         <button>All Countries</button>
         <button>Most Viewed</button>
         <button>My Favorites</button>
-
-        {/* 
-        country card components will go here 
-            <CountryCard /> xhowever many
-        */}
-        
+        < CountryCardList />
     </div>
     </>
 )
