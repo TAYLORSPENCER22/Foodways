@@ -20,7 +20,7 @@ function CountryCardList() {
 
   return (
     <>
-    <div className="card-wrapper">
+    <div>
       {countryCards.map(card => (
         <div className="individual-card-container">
         <p key={card.id}>{card.name}</p> 
