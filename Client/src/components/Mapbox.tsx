@@ -20,10 +20,13 @@ const Mapbox = () => {
   
   //render mapbox map
   useEffect(() => {
+
+    if (!mapContainerRef.current) return
+
     mapRef.current = new mapboxgl.Map({
-      accessToken: import.meta.env.VITE_MAPBOX_TOKEN,
+      accessToken: (import.meta as any).env.VITE_MAPBOX_TOKEN,
       container: mapContainerRef.current!,
-    //   style: 'mapbox://styles/taylorspencer22/cmqaffwub002n01qt9egtb92k',
+      style: 'mapbox://styles/taylorspencer22/cmqaffwub002n01qt9egtb92k',
       center: [-99.55446, 36.84276],
       zoom: 3.22
     });

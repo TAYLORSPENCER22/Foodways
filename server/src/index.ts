@@ -2,7 +2,16 @@ import express from "express";
 import { PrismaClient } from "../generated/prisma-client/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
 import "dotenv/config";
+import cors from "cors";
 import { get } from "node:http";
+
+// Initialize Express app
+const app = express();
+
+app.use(cors({
+    origin: "*",
+})
+)
 
 //Import routes
 import countriesRoutes from "./routes/countries.js"
@@ -15,8 +24,6 @@ const adapter = new PrismaPg({
 
 const prisma = new PrismaClient({ adapter }); 
 
-// Initialize Express app
-const app = express();
 
 app.use(express.json());
 
