@@ -77,7 +77,34 @@
 }
 
 .individual-card-container {
+  display: flex;
+  position: relative;
   background: red;
   height: 135px;
   width: 285px;
+}
+
+.country-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.main-card-description {
+  flex-direction: column;
+}
+
+
+
+.explore-btn {
+  position: absolute;
+}
+
+.card-words {
+  flex-direction: column;
+}
+
+.country-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

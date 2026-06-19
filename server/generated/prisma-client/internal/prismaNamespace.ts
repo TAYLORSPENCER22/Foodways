@@ -596,7 +596,8 @@ export const CountryScalarFieldEnum = {
   id: 'id',
   name: 'name',
   slug: 'slug',
-  imageUrl: 'imageUrl',
+  countryFlagUrl: 'countryFlagUrl',
+  countryImageUrl: 'countryImageUrl',
   description: 'description'
 } as const
 

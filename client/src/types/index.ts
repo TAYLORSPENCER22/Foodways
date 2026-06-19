@@ -2,7 +2,8 @@ export interface CountryCard {
     id: string;
     name: string;
     slug: string;
-    imageUrl?: string;
+    countryFlagUrl?: string;
+    countryImageUrl?: string;
     description?: string;
     foodCards: FoodCard[]; 
 }

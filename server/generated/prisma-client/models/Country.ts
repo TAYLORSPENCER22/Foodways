@@ -28,7 +28,8 @@ export type CountryMinAggregateOutputType = {
   id: string | null
   name: string | null
   slug: string | null
-  imageUrl: string | null
+  countryFlagUrl: string | null
+  countryImageUrl: string | null
   description: string | null
 }
 
@@ -36,7 +37,8 @@ export type CountryMaxAggregateOutputType = {
   id: string | null
   name: string | null
   slug: string | null
-  imageUrl: string | null
+  countryFlagUrl: string | null
+  countryImageUrl: string | null
   description: string | null
 }
 
@@ -44,7 +46,8 @@ export type CountryCountAggregateOutputType = {
   id: number
   name: number
   slug: number
-  imageUrl: number
+  countryFlagUrl: number
+  countryImageUrl: number
   description: number
   _all: number
 }
@@ -54,7 +57,8 @@ export type CountryMinAggregateInputType = {
   id?: true
   name?: true
   slug?: true
-  imageUrl?: true
+  countryFlagUrl?: true
+  countryImageUrl?: true
   description?: true
 }
 
@@ -62,7 +66,8 @@ export type CountryMaxAggregateInputType = {
   id?: true
   name?: true
   slug?: true
-  imageUrl?: true
+  countryFlagUrl?: true
+  countryImageUrl?: true
   description?: true
 }
 
@@ -70,7 +75,8 @@ export type CountryCountAggregateInputType = {
   id?: true
   name?: true
   slug?: true
-  imageUrl?: true
+  countryFlagUrl?: true
+  countryImageUrl?: true
   description?: true
   _all?: true
 }
@@ -151,7 +157,8 @@ export type CountryGroupByOutputType = {
   id: string
   name: string
   slug: string
-  imageUrl: string | null
+  countryFlagUrl: string | null
+  countryImageUrl: string | null
   description: string | null
   _count: CountryCountAggregateOutputType | null
   _min: CountryMinAggregateOutputType | null
@@ -180,7 +187,8 @@ export type CountryWhereInput = {
   id?: Prisma.StringFilter<"Country"> | string
   name?: Prisma.StringFilter<"Country"> | string
   slug?: Prisma.StringFilter<"Country"> | string
-  imageUrl?: Prisma.StringNullableFilter<"Country"> | string | null
+  countryFlagUrl?: Prisma.StringNullableFilter<"Country"> | string | null
+  countryImageUrl?: Prisma.StringNullableFilter<"Country"> | string | null
   description?: Prisma.StringNullableFilter<"Country"> | string | null
   foodCards?: Prisma.FoodCardListRelationFilter
 }
@@ -189,7 +197,8 @@ export type CountryOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
-  imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
+  countryFlagUrl?: Prisma.SortOrderInput | Prisma.SortOrder
+  countryImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   foodCards?: Prisma.FoodCardOrderByRelationAggregateInput
 }
@@ -201,7 +210,8 @@ export type CountryWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.CountryWhereInput[]
   NOT?: Prisma.CountryWhereInput | Prisma.CountryWhereInput[]
   name?: Prisma.StringFilter<"Country"> | string
-  imageUrl?: Prisma.StringNullableFilter<"Country"> | string | null
+  countryFlagUrl?: Prisma.StringNullableFilter<"Country"> | string | null
+  countryImageUrl?: Prisma.StringNullableFilter<"Country"> | string | null
   description?: Prisma.StringNullableFilter<"Country"> | string | null
   foodCards?: Prisma.FoodCardListRelationFilter
 }, "id" | "slug">
@@ -210,7 +220,8 @@ export type CountryOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
-  imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
+  countryFlagUrl?: Prisma.SortOrderInput | Prisma.SortOrder
+  countryImageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.CountryCountOrderByAggregateInput
   _max?: Prisma.CountryMaxOrderByAggregateInput
@@ -224,7 +235,8 @@ export type CountryScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"Country"> | string
   name?: Prisma.StringWithAggregatesFilter<"Country"> | string
   slug?: Prisma.StringWithAggregatesFilter<"Country"> | string
-  imageUrl?: Prisma.StringNullableWithAggregatesFilter<"Country"> | string | null
+  countryFlagUrl?: Prisma.StringNullableWithAggregatesFilter<"Country"> | string | null
+  countryImageUrl?: Prisma.StringNullableWithAggregatesFilter<"Country"> | string | null
   description?: Prisma.StringNullableWithAggregatesFilter<"Country"> | string | null
 }
 
@@ -232,7 +244,8 @@ export type CountryCreateInput = {
   id?: string
   name: string
   slug: string
-  imageUrl?: string | null
+  countryFlagUrl?: string | null
+  countryImageUrl?: string | null
   description?: string | null
   foodCards?: Prisma.FoodCardCreateNestedManyWithoutCountryInput
 }
@@ -241,7 +254,8 @@ export type CountryUncheckedCreateInput = {
   id?: string
   name: string
   slug: string
-  imageUrl?: string | null
+  countryFlagUrl?: string | null
+  countryImageUrl?: string | null
   description?: string | null
   foodCards?: Prisma.FoodCardUncheckedCreateNestedManyWithoutCountryInput
 }
@@ -250,7 +264,8 @@ export type CountryUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   foodCards?: Prisma.FoodCardUpdateManyWithoutCountryNestedInput
 }
@@ -259,7 +274,8 @@ export type CountryUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   foodCards?: Prisma.FoodCardUncheckedUpdateManyWithoutCountryNestedInput
 }
@@ -268,7 +284,8 @@ export type CountryCreateManyInput = {
   id?: string
   name: string
   slug: string
-  imageUrl?: string | null
+  countryFlagUrl?: string | null
+  countryImageUrl?: string | null
   description?: string | null
 }
 
@@ -276,7 +293,8 @@ export type CountryUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -284,7 +302,8 @@ export type CountryUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -292,7 +311,8 @@ export type CountryCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
-  imageUrl?: Prisma.SortOrder
+  countryFlagUrl?: Prisma.SortOrder
+  countryImageUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
 }
 
@@ -300,7 +320,8 @@ export type CountryMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
-  imageUrl?: Prisma.SortOrder
+  countryFlagUrl?: Prisma.SortOrder
+  countryImageUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
 }
 
@@ -308,7 +329,8 @@ export type CountryMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   slug?: Prisma.SortOrder
-  imageUrl?: Prisma.SortOrder
+  countryFlagUrl?: Prisma.SortOrder
+  countryImageUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
 }
 
@@ -343,7 +365,8 @@ export type CountryCreateWithoutFoodCardsInput = {
   id?: string
   name: string
   slug: string
-  imageUrl?: string | null
+  countryFlagUrl?: string | null
+  countryImageUrl?: string | null
   description?: string | null
 }
 
@@ -351,7 +374,8 @@ export type CountryUncheckedCreateWithoutFoodCardsInput = {
   id?: string
   name: string
   slug: string
-  imageUrl?: string | null
+  countryFlagUrl?: string | null
+  countryImageUrl?: string | null
   description?: string | null
 }
 
@@ -375,7 +399,8 @@ export type CountryUpdateWithoutFoodCardsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -383,7 +408,8 @@ export type CountryUncheckedUpdateWithoutFoodCardsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
-  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryFlagUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  countryImageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
@@ -422,7 +448,8 @@ export type CountrySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   id?: boolean
   name?: boolean
   slug?: boolean
-  imageUrl?: boolean
+  countryFlagUrl?: boolean
+  countryImageUrl?: boolean
   description?: boolean
   foodCards?: boolean | Prisma.Country$foodCardsArgs<ExtArgs>
   _count?: boolean | Prisma.CountryCountOutputTypeDefaultArgs<ExtArgs>
@@ -432,7 +459,8 @@ export type CountrySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   id?: boolean
   name?: boolean
   slug?: boolean
-  imageUrl?: boolean
+  countryFlagUrl?: boolean
+  countryImageUrl?: boolean
   description?: boolean
 }, ExtArgs["result"]["country"]>
 
@@ -440,7 +468,8 @@ export type CountrySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   id?: boolean
   name?: boolean
   slug?: boolean
-  imageUrl?: boolean
+  countryFlagUrl?: boolean
+  countryImageUrl?: boolean
   description?: boolean
 }, ExtArgs["result"]["country"]>
 
@@ -448,11 +477,12 @@ export type CountrySelectScalar = {
   id?: boolean
   name?: boolean
   slug?: boolean
-  imageUrl?: boolean
+  countryFlagUrl?: boolean
+  countryImageUrl?: boolean
   description?: boolean
 }
 
-export type CountryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "imageUrl" | "description", ExtArgs["result"]["country"]>
+export type CountryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "slug" | "countryFlagUrl" | "countryImageUrl" | "description", ExtArgs["result"]["country"]>
 export type CountryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   foodCards?: boolean | Prisma.Country$foodCardsArgs<ExtArgs>
   _count?: boolean | Prisma.CountryCountOutputTypeDefaultArgs<ExtArgs>
@@ -469,7 +499,8 @@ export type $CountryPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     id: string
     name: string
     slug: string
-    imageUrl: string | null
+    countryFlagUrl: string | null
+    countryImageUrl: string | null
     description: string | null
   }, ExtArgs["result"]["country"]>
   composites: {}
@@ -898,7 +929,8 @@ export interface CountryFieldRefs {
   readonly id: Prisma.FieldRef<"Country", 'String'>
   readonly name: Prisma.FieldRef<"Country", 'String'>
   readonly slug: Prisma.FieldRef<"Country", 'String'>
-  readonly imageUrl: Prisma.FieldRef<"Country", 'String'>
+  readonly countryFlagUrl: Prisma.FieldRef<"Country", 'String'>
+  readonly countryImageUrl: Prisma.FieldRef<"Country", 'String'>
   readonly description: Prisma.FieldRef<"Country", 'String'>
 }
     

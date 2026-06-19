@@ -27,7 +27,7 @@ router.get("/:slug", async (req, res) => {
 //create a country test (will remove later)
 router.post("/", async (req, res) => {
     console.log("Country Created Success!");
-    const { name, slug: providedSlug, imageUrl } = req.body;
+    const { name, slug: providedSlug, countryFlagUrl, countryImageUrl, description,} = req.body;
     if (!name) {
         return res.status(400).json({ error: "Name is required" });
     }
@@ -41,17 +41,17 @@ router.post("/", async (req, res) => {
 
     const newCountry = await prisma.country.create({
         data: {
-            name,
-            slug,
-            imageUrl
+        name,
+        slug,   
+        countryFlagUrl,
+        countryImageUrl,
+        description,
         },
     });
     res.json(newCountry);
   
     newCountry.name = name;
 })
-
-
 
 
  return router;

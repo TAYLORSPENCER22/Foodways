@@ -16,10 +16,13 @@ datasource db {
 
 // Country Model 
 model Country {
-  id          String  @id @default(uuid())
-  name        String
-  slug        String  @unique
-  imageUrl    String? // country circle logo
+  id   String @id @default(uuid())
+  name String
+  slug String @unique
+
+  countryFlagUrl  String? // country flag circle
+  countryImageUrl String? // main country card image
+
   description String? // short sidebar text
 
   foodCards FoodCard[]

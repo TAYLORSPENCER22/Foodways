@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 import { useState, useEffect } from 'react';
 import { CountryCard } from '../types';
+import ExploreCountryButton from './ExploreCountryButton';
 
 async function fetchCountryCards() {
   const response = await fetch(`${import.meta.env.VITE_API_URL}/countries/`);
@@ -19,17 +20,33 @@ function CountryCardList() {
   }, []);
 
   return (
-    <>
-    <div>
-      {countryCards.map(card => (
-        <div className="individual-card-container">
-        <p key={card.id}>{card.name}</p> 
-        <p key={card.id}>{card.description}</p>
+  <div className="card-wrapper">
+    {countryCards.map(card => (
+      <div key={card.id} className="individual-card-container">
+        <img
+          src={card.countryFlagUrl}
+          alt={card.name}
+          className="country-icon"
+        />
+
+        <div className="country-image-wrapper">
+          <img
+            src={card.countryImageUrl}
+            alt={card.name}
+            className="country-main-image"
+          />
         </div>
-      ))}
-    </div>
-    </>
-  );
+
+        <div className="card-words">
+          <p>{card.name}</p>
+          <p>{card.description}</p>
+
+          <ExploreCountryButton />
+        </div>
+      </div>
+    ))}
+  </div>
+);
 }
 
 export default CountryCardList;
