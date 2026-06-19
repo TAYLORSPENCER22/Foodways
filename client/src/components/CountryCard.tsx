@@ -38,10 +38,12 @@ function CountryCardList() {
         </div>
 
         <div className="card-words">
-          <p>{card.name}</p>
-          <p>{card.description}</p>
+          <p className='card-country-name'>{card.name}</p>
+          <p className='card-description'>{card.description}</p>
 
-          <ExploreCountryButton />
+          <ExploreCountryButton
+              onClick={() => console.log(card.foodCards)}
+            />
         </div>
       </div>
     ))}

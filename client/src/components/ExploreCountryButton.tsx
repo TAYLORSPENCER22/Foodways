@@ -1,10 +1,16 @@
-const ExploreCountryButton = () => {
+type ExploreCountryButtonProps = {
+  onClick: () => void;
+};
 
+const ExploreCountryButton = ({ onClick }: ExploreCountryButtonProps) => {
   return (
-    <>
-      <button>Explore Country</button>
-    </>
-  )
-}
+    <button
+      className="explore-btn"
+      onClick={onClick}
+    >
+      Explore Country
+    </button>
+  );
+};
 
-export default ExploreCountryButton
+export default ExploreCountryButton;

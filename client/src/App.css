@@ -1,3 +1,8 @@
+@import url('https://googleapis.com');
+
+*, *::before, *::after {
+    font-family: 'Inter', sans-serif !important;
+}
 .app {
   height: 100vh;
   width: 100vw;
@@ -44,16 +49,19 @@
 
 /* side bar display */
 .sideBar{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: rgb(17 43 48 / 95%);
   border:1px solid #92A09C;
   box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 600px;
+  height: 650px;
   color: #fff;
   padding: 6px 12px;
   font-family: monospace;
   z-index: 1;
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: 0;
   margin: 12px;
   border-radius: 15px;
@@ -71,17 +79,18 @@
   padding: 0;
   align-items: center;
   height: 488px;
+  max-width: 322px;
   gap: 7px;
-  background: blue;
   overflow-y: auto; 
 }
 
 .individual-card-container {
   display: flex;
   position: relative;
-  background: red;
-  height: 135px;
-  width: 285px;
+  background: rgb(255 255 255 / 20%);
+  min-height: 135px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .country-icon {
@@ -93,18 +102,33 @@
   flex-direction: column;
 }
 
-
-
 .explore-btn {
+  all: unset;
+  cursor: pointer;
   position: absolute;
+  background: #D8844E;
+  width: 115px;
+  height: 21px;
+  bottom: 5px;
+  right: 5px;
+  box-shadow: none;
 }
 
 .card-words {
   flex-direction: column;
+  padding: 10px;
+}
+
+p {
+    font-weight: 300 !important;
+}
+.card-description {
+  padding: 0;;
 }
 
 .country-main-image {
-  width: 100%;
+  width: 90px;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px 0 0 8px;
 }
