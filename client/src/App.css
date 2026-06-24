@@ -88,7 +88,7 @@
   display: flex;
   position: relative;
   background: rgb(255 255 255 / 20%);
-  min-height: 135px;
+  min-height: 150px;
   width: 100%;
   border-radius: 8px;
 }
@@ -106,12 +106,19 @@
   all: unset;
   cursor: pointer;
   position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
   background: #D8844E;
-  width: 115px;
+  border-radius: 14px;
+  padding: 2px 5px;
+  width: 150px;
   height: 21px;
-  bottom: 5px;
-  right: 5px;
-  box-shadow: none;
+  bottom: 10px;
+  right: 8px;
 }
 
 .card-words {
@@ -131,4 +138,9 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 8px 0 0 8px;
+}
+
+.card-words p {
+  margin: 0;
+  padding-bottom: 5px;
 }
