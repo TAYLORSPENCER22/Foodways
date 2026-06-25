@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { CountryCard } from '../types';
 import ExploreCountryButton from './ExploreCountryButton';
+import LearnMoreButton from './LearnMoreBtn';
 
 async function fetchCountryCards() {
   const response = await fetch(`${import.meta.env.VITE_API_URL}/countries/`);
@@ -45,6 +46,11 @@ function CountryCardList() {
         <div className="card-words">
           <p className='card-country-name'>{food.name}</p>
           <p className='card-description'>{food.description}</p>
+
+        <LearnMoreButton 
+          onClick={() =>
+            console.log(food)
+          }/>
 
         </div>
         </div>
