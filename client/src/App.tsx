@@ -1,5 +1,5 @@
 import Mapbox from './components/mapbox'
-import Header from './components/header'
+import Header from './components/Header'
 // import ExploreCountryButton from './components/ExploreCountryButton'
 
 import './App.css'

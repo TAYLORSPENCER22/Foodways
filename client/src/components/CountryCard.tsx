@@ -9,8 +9,13 @@ async function fetchCountryCards() {
   return data;
 }
 
+//this is fetching all country cards. i already have the data. on click i just neeed
+//to change whats actually displayed, not change the data. maybe i can use state. 
 function CountryCardList() {
   const [countryCards, setcountryCards] = useState<CountryCard[]>([]);
+  const [selectedCountry, setselectedCountry] = useState<CountryCard | null>(null);
+  const [loading, setloading] = useState(false);
+  
 
   useEffect(() => {
     fetchCountryCards().then((data) => {
@@ -18,6 +23,35 @@ function CountryCardList() {
       setcountryCards(data);
     });
   }, []);
+
+  if (loading) {
+    return <div className='card-wrapper'>Loading... </div>;
+  }
+
+  if (selectedCountry) {
+    return (
+    <div className='card-wrapper'>
+      {selectedCountry.foodCards.map(food => (
+        <div key={food.id} className='individual-card-container'>
+          
+          <div className="country-image-wrapper">
+          <img 
+          src = {food.imageUrl}
+          alt={food.name}
+          className='country-main-image'
+          />
+          </div>
+
+        <div className="card-words">
+          <p className='card-country-name'>{food.name}</p>
+          <p className='card-description'>{food.description}</p>
+
+        </div>
+        </div>
+      ))}
+    </div>
+    )
+  }
 
   return (
   <div className="card-wrapper">
@@ -42,7 +76,14 @@ function CountryCardList() {
           <p className='card-description'>{card.description}</p>
 
           <ExploreCountryButton
-              onClick={() => console.log(card.foodCards)}
+              onClick={() => {
+                setloading(true);
+
+                setTimeout(() => {
+                  setselectedCountry(card);
+                  setloading(false);
+                }, 500);
+              }}
             />
         </div>
       </div>

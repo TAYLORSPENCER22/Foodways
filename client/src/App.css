@@ -12,6 +12,8 @@
   align-items: center;
    }
 
+   /* MAP BOX */
+
 .map-container-wrapper {
   position: relative;
   width: 100%;
@@ -47,7 +49,9 @@
   cursor: pointer;
 }
 
-/* side bar display */
+
+
+/* SIDE BAR */
 .sideBar{
   display: flex;
   flex-direction: column;
@@ -70,8 +74,18 @@
 /* nav bar / header */
 .Header {
   height: 100px;
+  width: 100vw;
+  background-color: #0A3142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.Header h1 {
+color: #D8844E;
+}
+
+/* CARD CONTAINER */
 .card-wrapper {
   display: flex;
   flex-direction: column;
@@ -84,6 +98,7 @@
   overflow-y: auto; 
 }
 
+/* INDIVIDUAL CARDS  */
 .individual-card-container {
   display: flex;
   position: relative;
@@ -93,15 +108,18 @@
   border-radius: 8px;
 }
 
+/* COUNTRY FLAG ON CARD */
 .country-icon {
   width: 20px;
   height: 20px;
   position: absolute;
+  opacity: 0.8;
 }
 .main-card-description {
   flex-direction: column;
 }
 
+/* EXPLORE COUNTRY BUTTON */
 .explore-btn {
   all: unset;
   cursor: pointer;
@@ -113,7 +131,7 @@
   gap: 6px;
 
   background: #D8844E;
-  border-radius: 14px;
+  border-radius: 10px;
   padding: 2px 5px;
   width: 150px;
   height: 21px;
@@ -121,13 +139,15 @@
   right: 8px;
 }
 
+/* CONTAINER FOR CARD CONTENT */
 .card-words {
   flex-direction: column;
   padding: 10px;
 }
 
+
 p {
-    font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 .card-description {
   padding: 0;;
@@ -144,3 +164,4 @@ p {
   margin: 0;
   padding-bottom: 5px;
 }
+
