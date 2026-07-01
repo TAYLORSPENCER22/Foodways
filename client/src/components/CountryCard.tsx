@@ -10,8 +10,7 @@ async function fetchCountryCards() {
   return data;
 }
 
-//this is fetching all country cards. i already have the data. on click i just neeed
-//to change whats actually displayed, not change the data. maybe i can use state. 
+//fetch all country cards and change the view to show the food cards for that country when the explore button is clicked
 function CountryCardList() {
   const [countryCards, setcountryCards] = useState<CountryCard[]>([]);
   const [selectedCountry, setselectedCountry] = useState<CountryCard | null>(null);
