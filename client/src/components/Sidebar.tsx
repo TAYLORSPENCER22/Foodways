@@ -18,15 +18,15 @@ return (
 
         {selectedCountry ? (
             <>
-                <button>Country</button>
-                <button>Regions</button>
-                <button>Cities</button>
+                <button className='filterBtn'>Country</button>
+                <button className='filterBtn'>Regions</button>
+                <button className='filterBtn'>Cities</button>
             </>
         ) : (
             <>
-                <button>Countries</button>
-                <button>Most Viewed</button>
-                <button>Favorites</button>
+                <button className='filterBtn'>Countries</button>
+                <button className='filterBtn'>Most Viewed</button>
+                <button className='filterBtn'>Favorites</button>
             </>
         )}
 

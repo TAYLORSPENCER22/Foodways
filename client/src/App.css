@@ -120,6 +120,9 @@ color: #D8844E;
   flex-direction: column;
 }
 
+/* SIDEBAR FILTER BUTTONS */
+
+
 /* EXPLORE COUNTRY BUTTON */
 .explore-btn {
   all: unset;
