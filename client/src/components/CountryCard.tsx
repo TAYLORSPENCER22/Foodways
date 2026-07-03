@@ -10,10 +10,14 @@ async function fetchCountryCards() {
   return data;
 }
 
+type Props = {
+  selectedCountry: CountryCard | null;
+  setSelectedCountry: (country: CountryCard | null) => void;
+};
+
 //fetch all country cards and change the view to show the food cards for that country when the explore button is clicked
-function CountryCardList() {
+function CountryCardList({ selectedCountry, setSelectedCountry }: Props) {
   const [countryCards, setcountryCards] = useState<CountryCard[]>([]);
-  const [selectedCountry, setselectedCountry] = useState<CountryCard | null>(null);
   const [loading, setloading] = useState(false);
   
 
@@ -85,7 +89,7 @@ function CountryCardList() {
                 setloading(true);
 
                 setTimeout(() => {
-                  setselectedCountry(card);
+                  setSelectedCountry(card);
                   setloading(false);
                 }, 500);
               }}
