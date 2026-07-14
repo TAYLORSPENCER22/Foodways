@@ -9,15 +9,21 @@ return (
     <>
     <div className="sideBar">
         <div className='cardHeadingContainer'>
+        
+             {selectedCountry && ( <button
+                onClick={() => setSelectedCountry(null)} > ← Back </button> )}
+                
         <h1>{selectedCountry ? selectedCountry.name : 'Explore Countries'}</h1>
         
-        
+            
+
         <p> {selectedCountry ? `Explore ${selectedCountry.name}'s local favorites` 
             : 'Discover food, culture, and local favorites'}
         </p>
 
         {selectedCountry ? (
             <>
+
                 <button className='filterBtn'>Country</button>
                 <button className='filterBtn'>Regions</button>
                 <button className='filterBtn'>Cities</button>
