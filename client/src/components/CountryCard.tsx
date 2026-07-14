@@ -13,12 +13,14 @@ async function fetchCountryCards() {
 type Props = {
   selectedCountry: CountryCard | null;
   setSelectedCountry: (country: CountryCard | null) => void;
+  loading: boolean;
+  setLoading: (loading: boolean) => void;
 };
 
 //fetch all country cards and change the view to show the food cards for that country when the explore button is clicked
-function CountryCardList({ selectedCountry, setSelectedCountry }: Props) {
+function CountryCardList({ selectedCountry, setSelectedCountry, loading, setLoading }: Props) {
   const [countryCards, setcountryCards] = useState<CountryCard[]>([]);
-  const [loading, setloading] = useState(false);
+
   
 
   useEffect(() => {
@@ -86,11 +88,11 @@ function CountryCardList({ selectedCountry, setSelectedCountry }: Props) {
 
           <ExploreCountryButton
               onClick={() => {
-                setloading(true);
+                setLoading(true);
 
                 setTimeout(() => {
                   setSelectedCountry(card);
-                  setloading(false);
+                  setLoading(false);
                 }, 500);
               }}
             />

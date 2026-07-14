@@ -1,12 +1,21 @@
-import CountryCardList from '/Users/taylor/Desktop/Foodways/client/src/components/CountryCard'
+import CountryCardList from '../components/CountryCard'
 import { useState } from 'react';
 import { CountryCard } from '../types';
 
 const Sidebar = () => {
     const [selectedCountry, setSelectedCountry] = useState<CountryCard | null>(null);
+    const [loading, setLoading] = useState(false);
 return (
 
     <>
+
+    {loading ? (
+        <div className='sideBar'>
+            <div className='loading-spinner'></div>
+            <p>Loading...</p>
+        </div>
+    ) : 
+
     <div className="sideBar">
         <div className='cardHeadingContainer'>
         
@@ -48,10 +57,13 @@ return (
         < CountryCardList 
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
+            loading={loading}
+            setLoading={setLoading}
             />
         <p>View All Countries</p>
     </div>
 
+    }
     </>
 )
 }
