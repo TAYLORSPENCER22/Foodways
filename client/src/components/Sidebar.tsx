@@ -48,7 +48,7 @@ return (
         ) : (
             <>
                 <button className='filterBtn'>Countries</button>
-                <button className='filterBtn'>Most Viewed</button>
+                <button className='filterBtn'>Popular</button>
                 <button className='filterBtn'>Favorites</button>
             </>
         )}

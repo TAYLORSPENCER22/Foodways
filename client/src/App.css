@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
     font-family: 'Inter', sans-serif !important;
@@ -146,11 +146,18 @@
   background-color: #0A3142;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.Header svg {
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .Header h1 {
-color: #D8844E;
+color: #F8F5EF;
+padding: 0 10px;
+font-weight: 400;
 }
 
 /* CARD CONTAINER */
@@ -171,7 +178,7 @@ color: #D8844E;
   display: flex;
   position: relative;
   background: rgb(255 255 255 / 20%);
-  min-height: 150px;
+  min-height: 165px;
   width: 100%;
   border-radius: 8px;
 }
@@ -205,7 +212,7 @@ color: #D8844E;
 /* SIDEBAR FILTER BUTTONS */
 
 
-/* EXPLORE COUNTRY BUTTON */
+/* EXPLORE COUNTRY & LEARN MORE BUTTON */
 .explore-btn {
   all: unset;
   cursor: pointer;
@@ -219,7 +226,7 @@ color: #D8844E;
   background: #D8844E;
   border-radius: 10px;
   padding: 2px 5px;
-  width: 150px;
+  width: 100px;
   height: 21px;
   bottom: 10px;
   right: 8px;
