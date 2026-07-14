@@ -59,7 +59,7 @@
   background-color: rgb(17 43 48 / 95%);
   border:1px solid #92A09C;
   box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 650px;
+  height: 85%;
   width: 322px;
   color: #fff;
   padding: 6px 12px;
@@ -70,6 +70,73 @@
   left: 0;
   margin: 12px;
   border-radius: 15px;
+}
+
+/* BACK BUTTON ON SIDE BAR */
+.backBtn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  background: rgb(255 255 255 / 20%);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  top: 10px;
+  left: 8px;
+}
+
+.backBtn:hover {
+  background-color: #67795B;
+}
+
+/* SIDE BAR WHEN COUNTRY SELECTED */
+.cardHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.cardHeadingContainer h2 {
+  height: auto;
+  padding: 0;
+}
+
+.cardHeadingContainer p {
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* FILTER BUTTONS ON SIDEBAR */
+ .filterBtnContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 5px 0;
+}
+
+.filterBtn {
+  all: unset;
+  cursor: pointer;
+  background-color: rgb(255 255 255 / 20%);
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.filterBtn:hover {
+  background-color: #67795B;
 }
 
 /* nav bar / header */
@@ -93,7 +160,7 @@ color: #D8844E;
   margin: auto;
   padding: 0;
   align-items: center;
-  height: 488px;
+  height: 100%;
   max-width: 322px;
   gap: 7px;
   overflow-y: auto; 
@@ -116,6 +183,21 @@ color: #D8844E;
   position: absolute;
   opacity: 0.8;
 }
+
+/* COUNTRY NAME AND FLAG IN HEADER */
+.countryTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+/* FLAG ICON IN SIDEBAR HEADER  */
+.individual-country-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+}
+
 .main-card-description {
   flex-direction: column;
 }
